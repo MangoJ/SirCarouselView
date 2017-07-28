@@ -52,7 +52,7 @@
     ///添加定时器
     func addTimer()
     //移除定时器
-    removeTimer()
+    func removeTimer()
 ```
 
 ### Installation
