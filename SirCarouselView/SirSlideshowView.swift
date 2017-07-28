@@ -44,6 +44,8 @@ class SirSlideshowView: UIView {
     
     fileprivate var positionPage : PagePosition
     
+    fileprivate var timeInterval : TimeInterval
+    
     /// 是否添加Banner图片标题:默认为false,不添加
     var isShowImageTitle : Bool? = false {
         didSet{
@@ -87,6 +89,14 @@ class SirSlideshowView: UIView {
             pageControl?.currentPageIndicatorTintColor = currentPageIndicatorColor
         }
     }
+    ///自动滑动间隔时间(s), 默认为 3.0
+    var scrollInterval : TimeInterval = 3.0 {
+        didSet{
+            self.timeInterval = scrollInterval
+            removeTimer()
+            addTimer()
+        }
+    }
     
     
     /// 初始化方法
@@ -96,12 +106,13 @@ class SirSlideshowView: UIView {
     ///   - images: Banner图片数组
     ///   - imageTitles: Banner标题数组
     ///   - pagePosition: 分页指示器的位置
-    init(frame: CGRect,images:[Any]? = [],imageTitles:[String]? = [],pagePosition:PagePosition? = .center) {
+    init(frame: CGRect,images:[Any]? = [],imageTitles:[String]? = [],timeInterval:TimeInterval? = 3.0,pagePosition:PagePosition? = .center) {
         if images == nil {
             self.images = [""]
         }else{
             self.images = images ?? []
         }
+        self.timeInterval = timeInterval ?? 3.0
         self.imageTitles = imageTitles ?? []
         self.positionPage = pagePosition!
         super.init(frame: frame)
@@ -144,8 +155,8 @@ class SirSlideshowView: UIView {
     
     
     /// 添加timer
-    fileprivate func addTimer() {
-        timer = Timer(timeInterval: 2, repeats: true, block: { [weak self] _ in
+    func addTimer() {
+        timer = Timer(timeInterval: self.timeInterval, repeats: true, block: { [weak self] _ in
             self?.nextImage()
         })
         guard let timer = timer else {
@@ -155,7 +166,7 @@ class SirSlideshowView: UIView {
     }
     
     ///停止timer，将timer设置为nil才会销毁
-    fileprivate func removeTimer() {
+    func removeTimer() {
         timer?.invalidate()
         timer = nil
     }
