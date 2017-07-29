@@ -14,7 +14,7 @@
 		36C169491F21DCD100ABFD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C169471F21DCD100ABFD89 /* Main.storyboard */; };
 		36C1694B1F21DCD100ABFD89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C1694A1F21DCD100ABFD89 /* Assets.xcassets */; };
 		36C1694E1F21DCD100ABFD89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C1694C1F21DCD100ABFD89 /* LaunchScreen.storyboard */; };
-		36C169561F21DD7200ABFD89 /* SirSlideshowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C169551F21DD7200ABFD89 /* SirSlideshowView.swift */; };
+		36D0D2F61F2C132C00C4140F /* SirSlideshowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D0D2F51F2C132C00C4140F /* SirSlideshowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		36C1694A1F21DCD100ABFD89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36C1694D1F21DCD100ABFD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36C1694F1F21DCD100ABFD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36C169551F21DD7200ABFD89 /* SirSlideshowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SirSlideshowView.swift; sourceTree = "<group>"; };
+		36D0D2F51F2C132C00C4140F /* SirSlideshowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SirSlideshowView.swift; sourceTree = "<group>"; };
 		996560DFDCDD020A2641EBDE /* Pods-SirCarouselView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SirCarouselView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SirCarouselView/Pods-SirCarouselView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,15 +74,23 @@
 			isa = PBXGroup;
 			children = (
 				36C169431F21DCD100ABFD89 /* AppDelegate.swift */,
-				36C169551F21DD7200ABFD89 /* SirSlideshowView.swift */,
 				36C169451F21DCD100ABFD89 /* ViewController.swift */,
 				3685AED31F25876B00F91D76 /* TestViewController.swift */,
 				36C169471F21DCD100ABFD89 /* Main.storyboard */,
+				36D0D2F41F2C132C00C4140F /* SirSlideshowView */,
 				36C1694A1F21DCD100ABFD89 /* Assets.xcassets */,
 				36C1694C1F21DCD100ABFD89 /* LaunchScreen.storyboard */,
 				36C1694F1F21DCD100ABFD89 /* Info.plist */,
 			);
 			path = SirCarouselView;
+			sourceTree = "<group>";
+		};
+		36D0D2F41F2C132C00C4140F /* SirSlideshowView */ = {
+			isa = PBXGroup;
+			children = (
+				36D0D2F51F2C132C00C4140F /* SirSlideshowView.swift */,
+			);
+			path = SirSlideshowView;
 			sourceTree = "<group>";
 		};
 		5231A6D5CCDD1FD574B66F28 /* Pods */ = {
@@ -221,7 +229,7 @@
 				36C169461F21DCD100ABFD89 /* ViewController.swift in Sources */,
 				36C169441F21DCD100ABFD89 /* AppDelegate.swift in Sources */,
 				3685AED41F25876B00F91D76 /* TestViewController.swift in Sources */,
-				36C169561F21DD7200ABFD89 /* SirSlideshowView.swift in Sources */,
+				36D0D2F61F2C132C00C4140F /* SirSlideshowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
