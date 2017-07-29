@@ -16,6 +16,7 @@ class ViewController: UIViewController,SirSlideshowViewDelegate {
 //        let bannerView = SirSlideshowView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200), images: nil, pagePosition: .right)
         let bannerView = SirSlideshowView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200))
         bannerView.isShowImageTitle = true
+        bannerView.pagePosition = .right
         bannerView.delegate = self
         bannerView.images = ["test1","test2","http://img.ph.126.net/ocT0cPlMSiTs2BgbZ8bHFw==/631348372762626203.jpg"]
         bannerView.imageTitles = ["起舞飞扬","圣诞快乐","Love"]

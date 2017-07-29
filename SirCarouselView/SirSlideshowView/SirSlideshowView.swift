@@ -97,6 +97,11 @@ class SirSlideshowView: UIView {
             addTimer()
         }
     }
+    var pagePosition : PagePosition = .center{
+        didSet{
+            self.positionPage = pagePosition
+        }
+    }
     
     
     /// 初始化方法
@@ -159,7 +164,7 @@ class SirSlideshowView: UIView {
         if (timer != nil) {
             
         }else{
-            timer = Timer(timeInterval: 2, repeats: true, block: { [weak self] _ in
+            timer = Timer(timeInterval: self.timeInterval, repeats: true, block: { [weak self] _ in
                 self?.nextImage()
             })
             guard let timer = timer else {
@@ -278,6 +283,8 @@ class SirSlideshowView: UIView {
         case .center:
             pageControl?.frame = CGRect(x: 0, y: self.frame.height - 30, width: self.frame.width/3, height: 30)
             pageControl?.center.x = self.center.x
+            imageTitleView?.isHidden = true
+            
         case .left:
             pageControl?.frame = CGRect(x: 0, y: self.frame.height - 30, width: self.frame.width/3, height: 30)
              imagetitleLabel?.frame = CGRect(x: self.frame.width/3, y: self.frame.height - 30, width: self.frame.width*2/3, height: 30)
